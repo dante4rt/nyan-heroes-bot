@@ -17,7 +17,6 @@ Before running the bot, make sure you have:
 ```plaintext
 TOKEN=your_api_token_here
 ```
-````
 
 ## Obtaining API Token
 
