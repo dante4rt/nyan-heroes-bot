@@ -19,7 +19,6 @@ async function getProfile() {
     );
     console.log('Your total referral: '.green + data.totalReferral);
   } catch (error) {
-    console.log(error, 'apasi');
     console.log('Error in getProfile: '.red + error.code);
   }
 }
