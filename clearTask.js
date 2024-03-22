@@ -19,9 +19,11 @@ async function clearTask(tasks) {
       console.log(
         'Cleared task with title '.green + task.title + ': '.green + data.result
       );
+
+      await new Promise((resolve) => setTimeout(resolve, 5000));
     }
   } catch (error) {
-    console.log('Error in clearTask: '.red + error.code);
+    console.log('Error in clearTask: '.red + error.response.data);
   }
 }
 
