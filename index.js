@@ -6,6 +6,14 @@ const clearTask = require('./clearTask');
 const getProfile = require('./getProfile');
 
 async function processTasks() {
+  process.stdout.write('\x1Bc');
+  console.log('========================================'.cyan);
+  console.log('=      Nyan Heroes Bot – Season 2      ='.cyan);
+  console.log('=     Created by HappyCuanAirdrop      ='.cyan);
+  console.log('=    https://t.me/HappyCuanAirdrop     ='.cyan);
+  console.log('========================================'.cyan);
+  console.log();
+
   console.log('Select an option:');
   console.log('1. Get Tasks and Clear');
   console.log('2. Get Profile');

@@ -4,10 +4,11 @@ const axios = require('axios');
 async function getProfile() {
   try {
     const { data } = await axios({
-      url: 'https://api.nyanheroes.com/User/getUserQuestData',
+      url: 'https://api.nyanheroes.com/User/getUserQuestData?season=2',
       method: 'GET',
       headers: {
         Authorization: `Bearer ${process.env.TOKEN}`,
+        Origin: 'https://missions.nyanheroes.com',
       },
     });
 

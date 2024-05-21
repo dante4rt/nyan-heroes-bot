@@ -6,9 +6,10 @@ async function clearTask(tasks) {
     for (const task of tasks) {
       const { data } = await axios({
         method: 'POST',
-        url: 'https://api.nyanheroes.com/Quest/setQuest',
+        url: 'https://api.nyanheroes.com/Quest/setQuests',
         headers: {
           Authorization: `Bearer ${process.env.TOKEN}`,
+          Origin: 'https://missions.nyanheroes.com',
         },
         data: {
           Id: task.id,
@@ -23,7 +24,7 @@ async function clearTask(tasks) {
       await new Promise((resolve) => setTimeout(resolve, 5000));
     }
   } catch (error) {
-    console.log('Error in clearTask: '.red + error.response.data);
+    console.log('Error in clearTask: '.red + error);
   }
 }
 
